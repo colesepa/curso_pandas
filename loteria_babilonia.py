@@ -42,16 +42,29 @@ import random
 
 random_choice = random.randint(1, 15)
 
-# def get_input(tip:int) -> int:
-    
-#     for i in range(3):
-#         pass
-#     return 3
+i = 1
 
-while not True:
-    print(False)
-    
+while i <= 3:
+    tip = int(input('Digite um número: '))
+    if tip in range (1,16):
+        
+        if tip == random_choice:
+            print('Parabéns! Você acertou')
+            break
+        
+        elif tip > random_choice:
+            print('Valor errado, seu valor é maior do que o número surpresa!')
+        
+        else:
+            print('Valor errado, seu valor é menor do que o número surpresa!')
+            
+        print(f'Você só tem mais {3 - i} chances.')
+        
+        i +=1
+    else:
+        print('Valor inválido, escolha somente entre 1 e 15!')
+        
 
 
-
+""" Refazer com o try e except """
 # %%

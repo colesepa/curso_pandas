@@ -197,7 +197,7 @@ sys.platlibdir
 sys.prefix
 sys.stdin
 sys.thread_info
-sys.version
+# sys.version
 #%%
 import os
 
