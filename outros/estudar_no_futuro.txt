@@ -1,0 +1,4 @@
+Estudar a função dir() -> Função que lista funçoes dunder de um objeto
+requests -> Biblioteca de comunicação com APIs de internet 
+jason -> Biblioteca de transformaçao e manipulação de JASON
+tqdm -> Biblioteca de que lista e faz barra de progresso dentro de um for.

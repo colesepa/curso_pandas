@@ -1,0 +1,64 @@
+Comandos secundários no Python. 
+
+with open(<caminho-do-arquivos>, mode=<"mode">) as open_file:
+	open_file.<método>(<>)
+	
+	
+O modo acima faz com que se abra o arquivo enquanto estiver dentro do escopo
+do WITH e quando sair do escopo ele fecha o arquivo automaticamente.
+
+os modos podem de ser:
+
+'r' -> Comando padrão que lê o arquivo;
+'w' -> Comando que escreve o arquivo adicionando ao final do char existente e caso ele não exista um novo arquivo será criado;
+'x' -> Comando que cria um arquivo, falhando caso ele não exista;
+'a' -> Coamando que escreve um aquivo adicionado no final da linhas existente ou cria um novo;
+'b' -> Comando em Binario;
+'t' -> Modo de texto;
+'+' -> Abertura para edição;
+
+Pode se associar o modos, 'r+', 'rt', 'w+b'... 
+
+Alguns modos "truncam" os arquivos apagando o que já existia.
+
+I/O -> Input/Output (Entrada e saida) 
+
+O retorno da funçao bulit-in OPEN, é uma classe. Inclusive essa classe tem diversos meétodos:
+	
+	open.read(size=<-1/int>) -> Lê o conteudo do arquivo;
+		size:
+		  -1  -> valor padrão que lê o arquivo inteiro; 
+		  int -> valor o qual o metodo lerá o valor exato de caracteres.
+	
+	open.readline(size=<-1); -> Lê uma unica linha do arquivo até a quebra de página
+		size: Se especificado, lê até o número de caracteres especificado ou ate o fi
+		      da linha, o que vier primeiro.
+	
+	open.readlines() -> Lê todas as linhas do arquivo e retorna uma lista de string.
+
+	open.readable() -> Métodos que retorna True ou Falso para verificar se o arquivo está aberto.
+
+	open.close() -> Método que fecha o arquivo liberando para o sistema. deve ser usado toda vez que um arquivo for aberto.
+
+	open.closed -> Atributo que retorna o estado de abertura do aquivo (T/F)/(Aberto/Fechado);
+
+	open.flush() -> Grava os dados do arquivo na memoria física do pc. É basicamente um salvamento forçado do arquivo. E
+			acontece automaticamente quanso fecha o arquivo ou quando sai do escopo da função.
+
+	
+	open.seek(<offset>, whence=0) -> Método que move o cursor dentro do arquivo.
+		
+		offset -> Número de caracteres a mover;
+		whence -> Ponto de referencia;
+			
+			0: Inicio do arquivo (Padrão);
+			1: Posiçao atual do cursor;
+			2: Posição final:
+	
+	open.tell() -> Método que retonar a posição atual do cursor.
+
+	open.name -> Atributo que retorna o nome do arquivo;
+	open.mode -> Atributo que retonar o modo atual do arquivo:
+
+	
+	dir(objetc) -> Retorna os métodos das do objeto (clase)
