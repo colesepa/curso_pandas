@@ -1,0 +1,14 @@
+O pandas é uma ferramenta que auxilia na analise de dados, criando tipos de dados que  basicamente sào formados de "Series" que quando agrupadas de maneira correta
+forma um DataFrame (Conjunto de Series). 
+
+As Series se assemelham a uma lista, que pode conter index (chaves de correspondencia) e nome, ou seja, uma serie pode ser nomeada e conter um id para cada linha
+Elas podem ser acessadas como um lista, usando a notação de [], entretanto, dessa forma, ela nao acessa o valor da posição e sim o valor correspondente ao index
+passado nos colchetes. Essa notação ainda permite o uso de SLICES [:]. Ainda é posivel utilizar a busca pelo nome do index caso ele tenha Serie['<nome_do_index>] 
+
+Para acessar os valores posicionais de uma Serie, podemos utilizar a notaçao Serie.iloc[] -> Retornando o valor posicionado especificamente na posiçao inserida
+Assim como as Series puras a notaçao do iloc[] permite o uso de SLICES[:]. Com o iloc podemos também buscar valores de tras pra frente com a notação [-1].
+
+Já o DataFrame é um conjunto de diversas Séries agrupadas. As dfs, apresentam as meamas características da série. 
+
+O pandas consegue fazer df com base nos arquivos que estão salvos no clipboard (meu control+c)
+do meu pc.
